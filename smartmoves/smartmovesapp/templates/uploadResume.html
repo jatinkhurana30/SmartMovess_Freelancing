@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body%}
+<div class="col-lg-8 col-md-8">
+	<h3 class="mb-30">Upload Resume</h3>
+	<form action="/smartmovess/submitResume" method="post">
+		<div class="mt-10">
+			<input type="text" name="first_name" placeholder="First Name"
+				onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required
+				class="single-input">
+		</div>
+		<div class="mt-10">
+			<input type="text" name="last_name" placeholder="Last Name"
+				onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
+				class="single-input">
+		</div>
+		<div class="mt-10">
+			<input type="email" name="EMAIL" placeholder="Email address"
+				onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
+				class="single-input">
+		</div>
+		<div class="button-group-area mt-10">
+			<input type="file" name="resume_file" placeholder="Resume" required>
+		</div>
+		<div class="button-group-area mt-10">
+			<input type="submit" value = "Submit" class="genric-btn default-border radius">
+		</div>
+	</form>
+</div>
+{% endblock %}
